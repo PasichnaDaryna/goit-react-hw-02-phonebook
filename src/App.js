@@ -55,7 +55,7 @@ class App extends Component {
     this.setState({ filter: e.currentTarget.value });
   };
 
-  getVisibleContacts = () => {
+  getContacts = () => {
     const { contacts, filter } = this.state;
     const normalizedFilter = filter.toLowerCase();
 
@@ -66,7 +66,7 @@ class App extends Component {
 
   render() {
     const { filter, contacts } = this.state;
-    const visibleContacts = this.getVisibleContacts();
+    const visibleContacts = this.getContacts();
     return (
       <Container>
         <h1>Phonebook</h1>

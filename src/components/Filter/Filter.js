@@ -1,14 +1,14 @@
 import T from 'prop-types';
 import '../Filter/Filter.css';
 
-function Filter({ value, onChange }) {
+const Filter = ({ value, onChange }) => {
   return (
     <label>
       Find contacts by name
       <input type="text" value={value} onChange={onChange} />
     </label>
   );
-}
+};
 
 Filter.propTypes = {
   value: T.string,

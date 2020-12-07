@@ -52,7 +52,7 @@ class Form extends Component {
             value={number}
             onChange={this.handleChange}
             id={this.numberInputId}
-            placeholder="+38098 112 31 23"
+            placeholder="459-12-56"
           />
         </label>
 
