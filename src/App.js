@@ -31,13 +31,13 @@ class App extends Component {
         contact => contact.name.toLowerCase() === name.toLowerCase(),
       )
     ) {
-      alert(`${name} is already in contacts.`);
+      alert(`${name} is already in use`);
     } else if (contacts.find(contact => contact.number === number)) {
-      alert(`${number} is already in contacts.`);
+      alert(`${number} is already in use`);
     } else if (name.trim() === '' || number.trim() === '') {
-      alert("Enter the contact's name and number phone!");
+      alert("Enter the contact's name and phone number!");
     } else if (!/\d{3}[-]\d{2}[-]\d{2}/g.test(number)) {
-      alert('Enter the correct number phone!');
+      alert('Enter the correct phone number');
     } else {
       this.setState(({ contacts }) => ({
         contacts: [contact, ...contacts],
